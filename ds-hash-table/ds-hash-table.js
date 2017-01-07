@@ -5,7 +5,7 @@ var makeHashTable = function() {
 
   return {
     _storage: [],
-    retrieve: function(key) {
+    retrieve: function(key,index) {
       
     //your code is here
     for (var i = 0; i < _storage[index].length; i++) {
@@ -25,10 +25,15 @@ var makeHashTable = function() {
         _storage[index][k]=value
 
       }
-      _storage[index].push([key,value])
-      
+      else {storage[index].push([key,value]) }
+      }
+
+       _storage[index].set(index,_storage[index ])
+    }
+
 
   };
+  return _storage;
 };
 
 // This is a "hashing function". You don't need to worry about it, just use it to turn any key into a pseudo-random key
