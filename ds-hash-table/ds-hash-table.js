@@ -1,15 +1,33 @@
 var makeHashTable = function() {
   //Do not change the max!
   var max = 4;
+  var index=getIndexBelowMaxForKey(key, max)
 
   return {
     _storage: [],
     retrieve: function(key) {
-      //your code is here
+      
+    //your code is here
+    for (var i = 0; i < _storage[index].length; i++) {
+     if( _storage[index][i][0]===key){
+      return _storage[index][i][1]
+     }
+    }
     },
 
-    insert: function(key, value) {
-      //your code is here
+    insert: function(key, value,index ) {
+     
+      if(._storage[index]===undefined){
+        _storage[index][0]=key
+        _storage[index][1]=value
+      }
+      else if(._storage[index][k]===key){
+        _storage[index][k]=value
+
+      }
+      _storage[index].push([key,value])
+      
+
   };
 };
 
