@@ -11,6 +11,7 @@ Stackmethod.Add=function(value){
 	len++
 };
 Stackmethod.remove=function(value){
+	// remove from last 
 	var x= this.storage[len-1] // OR  x=this.storage[this.storage.length-1]
 	this.storage.splice(len-1,1) // OR this.storage.splice(this.storage.length-1,1)
 	return x 
